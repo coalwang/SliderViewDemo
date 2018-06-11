@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/left_move_btn"
+            android:text="左移"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/right_move_btn"
+            android:textSize="13sp"
+            android:text="右移"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--
+    这里设置了SliderView的宽度和高度，但最终以java代码中的为准
+    它的父容器为最外层的LinearLayout
+    这里的view相当于是一个画布，类中的onDraw方法的canvas是在该画布上进行画矩形的-->
+    <com.cola.sliderviewdemo.view.SliderView
+        android:layout_marginTop="100dp"
+        android:id="@+id/slider_view"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    </com.cola.sliderviewdemo.view.SliderView>
+
+</LinearLayout>
